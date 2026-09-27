@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mejora tu instrumento | SISE</title>
+
+<style>
+:root{
+  --red:#FF0E49;
+  --red-dark:#D9003E;
+  --dark:#241F21;
+  --dark2:#30282B;
+  --wine:#6B1E36;
+  --soft:#FFF1F5;
+  --border:#E7E1E3;
+  --text:#241F21;
+  --muted:#625A5D;
+  --green:#187451;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  padding:0;
+  background:#FFFFFF;
+}
+
+body{
+  padding:20px;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+}
+
+button,
+textarea,
+input{
+  font:inherit;
+}
+
+#actividad-t6{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  padding:30px;
+  border-radius:14px;
+  color:#FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark) 0%,
+      var(--dark2) 60%,
+      var(--wine) 140%
+    );
+}
+
+.badge{
+  display:inline-block;
+
+  margin-bottom:10px;
+  padding:6px 11px;
+
+  border-radius:999px;
+
+  background:var(--red);
+
+  color:#FFFFFF;
+
+  font-size:12px;
+  font-weight:900;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin:0;
+
+  font-size:clamp(32px,5vw,46px);
+
+  line-height:1.05;
+}
+
+.hero h1 span{
+  color:var(--red);
+}
+
+.hero p{
+  max-width:780px;
+
+  margin:12px 0 0;
+
+  color:#F5EDEF;
+
+  font-size:15.5px;
+
+  line-height:1.6;
+}
+
+
+/* =========================
+   PRODUCTO
+========================= */
+
+.product{
+  margin-top:15px;
+
+  padding:17px 19px;
+
+  border:1px solid #F7D4E0;
+
+  border-left:6px solid var(--red);
+
+  border-radius:10px;
+
+  background:var(--soft);
+}
+
+.product small{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--red);
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  letter-spacing:.07em;
+}
+
+.product p{
+  margin:0;
+
+  line-height:1.55;
+}
+
+
+/* =========================
+   SECCIÓN
+========================= */
+
+.section{
+  margin-top:25px;
+}
+
+.section-label{
+  color:var(--red);
+
+  font-size:12px;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+}
+
+.section h2{
+  margin:4px 0 7px;
+
+  font-size:27px;
+}
+
+.section-intro{
+  margin:0 0 15px;
+
+  color:var(--muted);
+
+  line-height:1.55;
+}
+
+
+/* =========================
+   PASOS
+========================= */
+
+.steps{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:8px;
+}
+
+.step{
+  padding:13px;
+
+  border:1px solid var(--border);
+
+  border-radius:9px;
+
+  background:#FFFFFF;
+
+  color:var(--dark);
+
+  text-align:left;
+
+  cursor:pointer;
+
+  font-weight:800;
+}
+
+.step span{
+  display:block;
+
+  margin-bottom:4px;
+
+  color:var(--red);
+
+  font-size:11px;
+
+  font-weight:900;
+}
+
+.step.active{
+  border-color:var(--red);
+
+  background:var(--soft);
+
+  box-shadow:
+    inset 0 -4px 0 var(--red);
+}
+
+
+/* =========================
+   PANEL
+========================= */
+
+.panel{
+  margin-top:10px;
+
+  overflow:hidden;
+
+  border:1px solid var(--border);
+
+  border-radius:11px;
+}
+
+.panel-head{
+  padding:17px 19px;
+
+  background:var(--dark);
+
+  color:#FFFFFF;
+}
+
+.panel-head small{
+  color:#FFB6CA;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+}
+
+.panel-head h3{
+  margin:4px 0 0;
+
+  font-size:22px;
+}
+
+.panel-body{
+  padding:20px;
+}
+
+.panel-body p{
+  margin:0 0 13px;
+
+  color:#454044;
+
+  line-height:1.6;
+}
+
+.panel-body ul{
+  margin:0;
+
+  padding-left:20px;
+
+  color:#454044;
+
+  line-height:1.7;
+}
+
+
+/* =========================
+   PLANTILLA
+========================= */
+
+.workspace{
+  margin-top:24px;
+
+  padding:20px;
+
+  border:1px solid var(--border);
+
+  border-radius:11px;
+
+  background:#F8F6F7;
+}
+
+.workspace h2{
+  margin:0 0 5px;
+
+  font-size:24px;
+}
+
+.workspace > p{
+  margin:0 0 17px;
+
+  color:var(--muted);
+
+  line-height:1.55;
+}
+
+.field{
+  margin-bottom:15px;
+}
+
+.field label{
+  display:block;
+
+  margin-bottom:6px;
+
+  font-weight:800;
+}
+
+.field small{
+  display:block;
+
+  margin:-2px 0 7px;
+
+  color:var(--muted);
+}
+
+.field textarea{
+  width:100%;
+
+  min-height:90px;
+
+  resize:vertical;
+
+  padding:12px;
+
+  border:1px solid #CCC5C7;
+
+  border-radius:8px;
+
+  background:#FFFFFF;
+
+  color:var(--text);
+
+  font-size:16px;
+
+  line-height:1.5;
+}
+
+.field textarea:focus{
+  outline:3px solid rgba(255,14,73,.15);
+
+  border-color:var(--red);
+}
+
+
+/* =========================
+   ASISTENTE
+========================= */
+
+.ai-box{
+  margin-top:20px;
+
+  padding:18px;
+
+  border-radius:10px;
+
+  background:var(--dark);
+
+  color:#FFFFFF;
+}
+
+.ai-box small{
+  color:#FFB6CA;
+
+  font-weight:900;
+
+  text-transform:uppercase;
+}
+
+.ai-box h3{
+  margin:5px 0 8px;
+}
+
+.ai-box p{
+  margin:0;
+
+  color:#F3ECEE;
+
+  line-height:1.6;
+}
+
+
+/* =========================
+   CHECKLIST
+========================= */
+
+.check{
+  margin-top:20px;
+}
+
+.check h2{
+  margin-bottom:12px;
+}
+
+.check-item{
+  display:flex;
+
+  gap:10px;
+
+  align-items:flex-start;
+
+  margin-bottom:8px;
+
+  padding:12px;
+
+  border:1px solid var(--border);
+
+  border-radius:8px;
+
+  background:#FFFFFF;
+}
+
+.check-item input{
+  width:19px;
+  height:19px;
+
+  accent-color:var(--red);
+}
+
+.check-item label{
+  line-height:1.45;
+}
+
+
+/* =========================
+   DESCARGA
+========================= */
+
+.download-actions{
+  display:flex;
+
+  justify-content:flex-end;
+
+  margin-top:20px;
+}
+
+.download-btn{
+  min-height:46px;
+
+  padding:12px 18px;
+
+  border:0;
+
+  border-radius:8px;
+
+  background:var(--red);
+
+  color:#FFFFFF;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:.2s ease;
+}
+
+.download-btn:hover{
+  background:var(--red-dark);
+}
+
+.download-btn:focus-visible{
+  outline:3px solid rgba(255,14,73,.22);
+
+  outline-offset:3px;
+}
+
+
+/* =========================
+   CIERRE
+========================= */
+
+.final{
+  margin-top:20px;
+
+  padding:19px;
+
+  border-left:6px solid var(--red);
+
+  border-radius:9px;
+
+  background:var(--soft);
+}
+
+.final strong{
+  display:block;
+
+  margin-bottom:5px;
+
+  color:var(--red);
+}
+
+.final p{
+  margin:0;
+
+  line-height:1.6;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:760px){
+
+  body{
+    padding:12px;
+  }
+
+  .hero{
+    padding:24px 20px;
+  }
+
+  .steps{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .download-actions{
+    justify-content:stretch;
+  }
+
+  .download-btn{
+    width:100%;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<main id="actividad-t6">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="badge">
+    ACTIVIDAD AUTÉNTICA · TEMA 06 · 15–20 MIN
+  </div>
+
+  <h1>
+    Mejora tu <span>instrumento</span>
+  </h1>
+
+  <p>
+    Recupera la rúbrica que construiste en el Tema 05
+    y realiza una segunda versión más clara, formativa
+    y preparada para valorar el uso responsable de IA.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTO
+========================= -->
+
+<section class="product">
+
+  <small>
+    Producto del Tema 06
+  </small>
+
+  <p>
+    <strong>Rúbrica ajustada</strong> con criterios claros,
+    niveles de desempeño observables, retroalimentación formativa
+    y un criterio explícito de uso responsable y transparente de IA.
+  </p>
+
+</section>
+
+
+<!-- =========================
+     RUTA
+========================= -->
+
+<section class="section">
+
+  <span class="section-label">
+    Tu ruta de trabajo
+  </span>
+
+  <h2>
+    Mejora tu rúbrica en 4 momentos
+  </h2>
+
+  <p class="section-intro">
+    Selecciona cada momento para revisar qué debes hacer.
+  </p>
+
+
+  <div class="steps">
+
+    <button
+      class="step active"
+      type="button"
+      data-step="0">
+
+      <span>01</span>
+
+      Revisar criterios
+
+    </button>
+
+
+    <button
+      class="step"
+      type="button"
+      data-step="1">
+
+      <span>02</span>
+
+      Mejorar niveles
+
+    </button>
+
+
+    <button
+      class="step"
+      type="button"
+      data-step="2">
+
+      <span>03</span>
+
+      Incorporar IA
+
+    </button>
+
+
+    <button
+      class="step"
+      type="button"
+      data-step="3">
+
+      <span>04</span>
+
+      Retroalimentar
+
+    </button>
+
+  </div>
+
+
+  <div class="panel">
+
+    <div class="panel-head">
+
+      <small id="panelStep">
+        MOMENTO 01
+      </small>
+
+      <h3 id="panelTitle">
+        Revisa tus criterios
+      </h3>
+
+    </div>
+
+
+    <div
+      class="panel-body"
+      id="panelBody">
+
+      <p>
+        Revisa los criterios de la rúbrica
+        que construiste en el Tema 05.
+      </p>
+
+      <ul>
+
+        <li>
+          Comprueba que cada criterio sea observable.
+        </li>
+
+        <li>
+          Elimina o combina criterios que se superponen.
+        </li>
+
+        <li>
+          Mejora por lo menos un criterio
+          que todavía sea ambiguo.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PLANTILLA
+========================= -->
+
+<section class="workspace">
+
+  <h2>
+    Registra tus principales ajustes
+  </h2>
+
+  <p>
+    No necesitas copiar aquí toda la rúbrica.
+    Utiliza este espacio para organizar las mejoras
+    antes de preparar tu versión final.
+  </p>
+
+
+  <div class="field">
+
+    <label for="criterio">
+      1. Criterio que necesitas mejorar
+    </label>
+
+    <small>
+      Identifica un criterio ambiguo,
+      general o redundante.
+    </small>
+
+    <textarea
+      id="criterio"
+      placeholder="Ejemplo: Calidad de la propuesta..."></textarea>
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="mejora">
+      2. Nueva versión observable
+    </label>
+
+    <small>
+      Redáctalo indicando con claridad
+      qué podrá observarse.
+    </small>
+
+    <textarea
+      id="mejora"
+      placeholder="Escribe aquí la versión mejorada del criterio..."></textarea>
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="ia">
+      3. Ajuste del criterio de IA
+    </label>
+
+    <small>
+      Adapta el criterio al tipo
+      de evidencia que evalúas.
+    </small>
+
+    <textarea
+      id="ia"
+      placeholder="Uso responsable y transparente de Inteligencia Artificial..."></textarea>
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="feedback">
+      4. Retroalimentación breve
+    </label>
+
+    <small>
+      Escribe una orientación concreta
+      que ayude al estudiante a mejorar.
+    </small>
+
+    <textarea
+      id="feedback"
+      placeholder="Para mejorar, te recomiendo..."></textarea>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ASISTENTE
+========================= -->
+
+<section class="ai-box">
+
+  <small>
+    Asistente de Evaluaciones
+  </small>
+
+  <h3>
+    Utiliza la IA como apoyo para revisar
+  </h3>
+
+  <p>
+    Comparte tu rúbrica con el Asistente de Evaluaciones
+    y solicita sugerencias sobre claridad de criterios,
+    progresión de niveles, retroalimentación y uso responsable de IA.
+    <strong>
+      Después revisa las recomendaciones y decide
+      cuáles conservar, modificar o descartar.
+    </strong>
+  </p>
+
+</section>
+
+
+<!-- =========================
+     CHECKLIST
+========================= -->
+
+<section class="check">
+
+  <span class="section-label">
+    Antes de cerrar
+  </span>
+
+  <h2>
+    Revisa tu versión final
+  </h2>
+
+
+  <div class="check-item">
+
+    <input
+      type="checkbox"
+      id="c1">
+
+    <label for="c1">
+      Mis criterios describen aspectos observables
+      y no se superponen.
+    </label>
+
+  </div>
+
+
+  <div class="check-item">
+
+    <input
+      type="checkbox"
+      id="c2">
+
+    <label for="c2">
+      Los niveles muestran una progresión
+      real del desempeño.
+    </label>
+
+  </div>
+
+
+  <div class="check-item">
+
+    <input
+      type="checkbox"
+      id="c3">
+
+    <label for="c3">
+      Incorporé el criterio
+      “Uso responsable y transparente de Inteligencia Artificial”.
+    </label>
+
+  </div>
+
+
+  <div class="check-item">
+
+    <input
+      type="checkbox"
+      id="c4">
+
+    <label for="c4">
+      Incluí orientaciones breves de retroalimentación
+      para los criterios centrales.
+    </label>
+
+  </div>
+
+
+  <div class="check-item">
+
+    <input
+      type="checkbox"
+      id="c5">
+
+    <label for="c5">
+      Revisé las sugerencias de IA y decidí
+      cuáles conservar, modificar o descartar.
+    </label>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     BOTÓN DE DESCARGA
+========================= -->
+
+<div class="download-actions">
+
+  <button
+    type="button"
+    class="download-btn"
+    id="downloadActivity">
+
+    Descargar mi versión final
+
+  </button>
+
+</div>
+
+
+<!-- =========================
+     CIERRE
+========================= -->
+
+<section class="final">
+
+  <strong>
+    Evidencia del Módulo 3
+  </strong>
+
+  <p>
+    Cuando termines la revisión,
+    genera y guarda la
+    <strong>versión final de tu rúbrica</strong>.
+    Esta será la evidencia del Módulo 3.
+  </p>
+
+</section>
+
+
+</main>
+
+
+<script>
+(function(){
+
+  const root =
+    document.getElementById("actividad-t6");
+
+
+  /* =========================
+     RUTA DE TRABAJO
+  ========================= */
+
+  const DATA = [
+
+    {
+      step:"MOMENTO 01",
+
+      title:"Revisa tus criterios",
+
+      body:
+        "<p>Revisa los criterios de la rúbrica que construiste en el Tema 05.</p>" +
+
+        "<ul>" +
+
+        "<li>Comprueba que cada criterio sea observable.</li>" +
+
+        "<li>Elimina o combina criterios que se superponen.</li>" +
+
+        "<li>Mejora por lo menos un criterio que todavía sea ambiguo.</li>" +
+
+        "</ul>"
+    },
+
+
+    {
+      step:"MOMENTO 02",
+
+      title:"Mejora los niveles de desempeño",
+
+      body:
+        "<p>Comprueba que los niveles describan diferencias reales de calidad.</p>" +
+
+        "<ul>" +
+
+        "<li>Mantén el mismo aspecto del desempeño en todos los niveles.</li>" +
+
+        "<li>Evita diferencias basadas solo en palabras como “excelente”, “bueno” o “regular”.</li>" +
+
+        "<li>Revisa que la progresión pueda observarse en la evidencia.</li>" +
+
+        "</ul>"
+    },
+
+
+    {
+      step:"MOMENTO 03",
+
+      title:"Incorpora el criterio de IA",
+
+      body:
+        "<p>Incluye el criterio <strong>“Uso responsable y transparente de Inteligencia Artificial”</strong>.</p>" +
+
+        "<ul>" +
+
+        "<li>Adapta sus descriptores al tipo de evidencia de tu curso.</li>" +
+
+        "<li>Considera declaración de uso, verificación e intervención personal.</li>" +
+
+        "<li>No agregues exigencias que no correspondan a la actividad.</li>" +
+
+        "</ul>"
+    },
+
+
+    {
+      step:"MOMENTO 04",
+
+      title:"Incorpora retroalimentación",
+
+      body:
+        "<p>Utiliza los criterios y niveles para orientar la mejora del estudiante.</p>" +
+
+        "<ul>" +
+
+        "<li>Incluye una orientación breve para los criterios centrales.</li>" +
+
+        "<li>Indica qué puede fortalecer el estudiante.</li>" +
+
+        "<li>Formula una acción concreta que le permita avanzar.</li>" +
+
+        "</ul>"
+    }
+
+  ];
+
+
+  const buttons =
+    root.querySelectorAll(".step");
+
+  const panelStep =
+    root.querySelector("#panelStep");
+
+  const panelTitle =
+    root.querySelector("#panelTitle");
+
+  const panelBody =
+    root.querySelector("#panelBody");
+
+
+  buttons.forEach(function(button){
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        buttons.forEach(function(item){
+
+          item.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        const data =
+          DATA[
+            Number(
+              button.dataset.step
+            )
+          ];
+
+
+        panelStep.textContent =
+          data.step;
+
+
+        panelTitle.textContent =
+          data.title;
+
+
+        panelBody.innerHTML =
+          data.body;
+
+      }
+    );
+
+  });
+
+
+
+  /* =========================
+     DESCARGA
+  ========================= */
+
+  const downloadButton =
+    root.querySelector(
+      "#downloadActivity"
+    );
+
+
+  downloadButton.addEventListener(
+    "click",
+    function(){
+
+
+      const criterio =
+        root
+          .querySelector("#criterio")
+          .value
+          .trim();
+
+
+      const mejora =
+        root
+          .querySelector("#mejora")
+          .value
+          .trim();
+
+
+      const criterioIA =
+        root
+          .querySelector("#ia")
+          .value
+          .trim();
+
+
+      const feedback =
+        root
+          .querySelector("#feedback")
+          .value
+          .trim();
+
+
+      const checks = [];
+
+
+      root
+        .querySelectorAll(
+          ".check-item input"
+        )
+        .forEach(
+          function(input){
+
+            const label =
+              root.querySelector(
+                'label[for="' +
+                input.id +
+                '"]'
+              );
+
+
+            checks.push(
+
+              (
+                input.checked
+                ? "✓ "
+                : "☐ "
+              )
+
+              +
+
+              label
+                .textContent
+                .trim()
+
+            );
+
+          }
+        );
+
+
+      const contenido =
+
+`ACTIVIDAD AUTÉNTICA · TEMA 06
+MEJORA TU INSTRUMENTO
+
+========================================
+1. CRITERIO QUE NECESITA MEJORA
+========================================
+
+${criterio || "Sin completar"}
+
+
+========================================
+2. NUEVA VERSIÓN OBSERVABLE
+========================================
+
+${mejora || "Sin completar"}
+
+
+========================================
+3. CRITERIO DE USO RESPONSABLE DE IA
+========================================
+
+${criterioIA || "Sin completar"}
+
+
+========================================
+4. RETROALIMENTACIÓN BREVE
+========================================
+
+${feedback || "Sin completar"}
+
+
+========================================
+CHECKLIST DE REVISIÓN
+========================================
+
+${checks.join("\n")}
+
+
+========================================
+PRODUCTO DEL TEMA 06
+========================================
+
+Rúbrica ajustada con criterios claros,
+niveles de desempeño observables,
+retroalimentación formativa y criterio
+explícito de uso responsable y
+transparente de Inteligencia Artificial.
+
+Evidencia del Módulo 3.
+`;
+
+
+      const blob =
+        new Blob(
+          [contenido],
+          {
+            type:
+              "text/plain;charset=utf-8"
+          }
+        );
+
+
+      const url =
+        URL.createObjectURL(blob);
+
+
+      const link =
+        document.createElement("a");
+
+
+      link.href =
+        url;
+
+
+      link.download =
+        "Actividad_Tema_06_Mejora_tu_instrumento.txt";
+
+
+      document.body.appendChild(
+        link
+      );
+
+
+      link.click();
+
+
+      link.remove();
+
+
+      setTimeout(
+        function(){
+
+          URL.revokeObjectURL(
+            url
+          );
+
+        },
+        500
+      );
+
+    }
+  );
+
+})();
+</script>
+
+</body>
+</html>
